@@ -8,7 +8,6 @@ Unlock the power of Git  with this cheat sheet! Git, the free and open-source ve
   * ✓ Browsing history
   * ✓ Branching & merging
   * ✓ Collaboration using Git & GitHub
-  * ✓ Rewriting history
 
 # * Creating Snapshots
 
@@ -194,6 +193,80 @@ Unlock the power of Git  with this cheat sheet! Git, the free and open-source ve
 |---------------------|----------------------------------------------|
 | git log master.."name"           |  Lists the commits in the "name" branch not in master   |
 | git diff master.."name"           |  Shows the summary of changes   |
+
+
+* Stashing
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git stash push -m “name”          |  Creates a new stash   |
+| git stash list           |  Lists all the stashes   |
+| git stash show 1           |  shortcut for stash@{1}  |
+| git stash apply 1           |  Applies the given stash to the working dir  |
+| git stash drop 1           |  Deletes the given stash  |
+| git stash clear           |  Deletes all the stashes  |
+
+* Merging
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git merge "branch-name"          |  Merges the "branch-name" branch into the current branch   |
+| git merge --no-ff "branch-name"            |  Creates a merge commit even if FF is possible   |
+| git merge --squash "branch-name"            |  Performs a squash merge |
+| git merge --abort           |  Aborts the merge  |
+
+
+* Viewing the merged branches
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git branch --merged         |  Shows the merged branches   |
+| git branch --no-merged            | Shows the unmerged branches  |
+
+* Rebasing
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git rebase master         |  Changes the base of the current branch   |
+
+
+
+# * Collaboration
+
+* Cloning a repository
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git clone url           |  Cloning a repository   |
+
+
+* Syncing with remotes
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git fetch origin master           |  Fetches master from origin   |
+| git pull         |  Fetch + merge   |
+| git push         |  Pushes master to origin   |
+
+
+* Sharing tags
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git push origin v1.0           |  Pushes tag v1.0 to origin   |
+
+
+* Sharing branches
+    
+| Command             | Description                                |
+|---------------------|----------------------------------------------|
+| git branch -r           | Shows remote tracking branches   |
+| git push -u origin "name"          | Pushes "name" to origin   |
+| git push -d origin "name"          | Removes "name" from origin   |
+
+    
+
+
 
 
 
